@@ -1,0 +1,644 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+/* Root */ 
+:root {
+    --grass: rgb(18, 159, 18);
+    --normal: rgb(107, 96, 96);
+    --fighting: rgb(148, 0, 0);
+    --ice: rgb(112, 217, 255);
+    --fire: rgb(228, 110, 0);
+    --water: rgb(54, 54, 247);
+    --electric: rgb(255, 225, 0);
+    --poison: rgb(102, 8, 128);
+    --ground: rgb(61, 31, 31);
+    --flying: rgb(149, 149, 149);
+    --psychic: rgb(195, 0, 101);
+    --bug: rgb(32, 82, 20);
+    --rock: rgb(49, 49, 49);
+    --ghost: rgb(77, 77, 154);
+    --dragon: blue;
+    --dark: black;
+    --steel: rgb(145, 145, 145);
+    --fairy: rgb(255, 53, 144);
+    --unknown: rgb(99, 71, 71);
+    --shadow: rgb(27, 27, 27);
+}
+/* Main */
+.main {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    background-color: whitesmoke;
+}
+/* Home.jsx */ 
+.section-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-home {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.home-text {
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+.home-text_h2 {
+    font-weight: 700;
+    font-size: 40px;
+    color: rgba(254, 25, 54, 1);
+}
+.home-text_p {
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(48, 47, 47, 1)
+}
+.home-form {
+    box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.19);
+}
+.home-input {
+    height: 40px;
+    font-weight: 500;
+    font-size: 17px;
+    color: gray;
+    border: none;
+    padding-left: 20px;
+}
+::placeholder { color : rgba(211, 211, 211, 1); }
+.home-button {
+    height: 40px;
+    width: 80px;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: rgba(217, 63, 63, 1);
+    color: rgba(255, 255, 255, 1); 
+    border: none;
+}
+   
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.footer-red {
+    width: 100%;
+    height: 90px;
+    background-color: rgba(221, 26, 26, 1);
+}
+.footer-black  {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(12, 12, 12, 1);
+}
+.footer-circle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 120px;
+    position: absolute;
+}
+.circle-gb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: black solid 7px;
+    background-color: rgba(33, 33, 33, 1);
+    border-radius: 30px;
+}
+.circle-wb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border: black solid 7px;
+    background-color: white;
+    border-radius: 40px;
+}
+/* Header */ 
+.header {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+}
+.header-red {
+    width: 100%;
+    height: 90px;
+    background-color: rgba(221, 26, 26, 1);
+}
+.header-black  {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(12, 12, 12, 1);
+}
+.header-circle {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    width: 100%;
+    height: 85px;
+    padding-right: 30px;
+    position: absolute;
+}
+
+/* Pokedex Search */ 
+.search {
+    position: absolute;
+    margin-top: 80px;
+    width: 100%;
+    height: 100px;
+}
+.search-p {
+    display: flex;
+    justify-content: center;
+    color: rgba(51, 51, 51, 1);
+    font-weight: 400;
+}
+.search-span {
+    color: rgba(254, 25, 54, 1);
+    font-weight: 700;
+    padding-right: 5px;
+}
+.search-form {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+   
+}
+.search-buttondiv {
+    box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.19);
+}
+.search-input {
+    height: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    color: gray;
+    border: none;
+    padding-left: 20px;
+}
+.search-select {
+    height: 40px;
+    width: 200px;
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(15, 15, 45, 1);
+    border: none;
+    padding-left: 20px;
+    box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.19);
+}
+/* List */
+.pokemonlist {
+    position: absolute;
+    margin-top: 210px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/* Poke Card */
+.article-container_div {
+    margin: 5px;
+    padding: 10px;
+    width: 261px;
+    height: 383px;
+}
+.link-card {
+    text-decoration: none;
+    color: black;
+}
+.header-div_card {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 232px;
+    height: 140px;
+}
+.header-img_card {
+    max-width: 100px;
+}
+.section-card {
+    display: grid;
+    justify-items: center;
+}
+.section-card_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 22px;
+}
+/* Poke Stats */
+.pokestats-ul {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: 45px 45px 45px;
+    grid-template-columns: 115px 110px;
+    height: 150px;
+    width: 250px;
+    font-size: 12px;
+    list-style-type: none;
+}
+.pokestats-li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*styles*/
+.grass-style {
+    border: solid var(--grass) 8px;
+    border-radius: 5px;
+}
+.grass-style_bg {
+    background-color: rgba(106, 255, 80, 0.559);
+    border-radius: 5px;
+}
+.grass-style_words {
+    color:rgba(16, 51, 10, 0.559);
+}
+/**/
+.normal-style {
+    border: solid var(--normal) 8px;
+    border-radius: 5px;
+}
+.normal-style_bg {
+    background-color: rgba(83, 85, 83, 0.559);
+    border-radius: 5px;
+}
+.normal-style_words {
+    color:rgba(33, 33, 33, 0.559);
+}
+/**/
+.fighting-style {
+    border: solid var(--fighting) 8px;
+    border-radius: 5px;
+}
+.fighting-style_bg {
+    background-color: rgba(93, 35, 34, 0.559);
+    border-radius: 5px;
+}
+.fighting-style_words {
+    color:rgba(171, 41, 41, 0.559);
+}
+/**/
+.ice-style {
+    border: solid var(--ice) 8px;
+    border-radius: 5px;
+}
+.ice-style_bg {
+    background-color: rgba(20, 158, 171, 0.559);
+    border-radius: 5px;
+}
+.ice-style_words {
+    color:rgba(88, 162, 202, 0.559);
+}
+/**/
+.fire-style {
+    border: solid var(--fire) 8px;
+    border-radius: 5px;
+}
+.fire-style_bg {
+    background-color: rgba(199, 107, 32, 0.559);
+    border-radius: 5px;
+}
+.fire-style_words {
+    color:rgba(201, 110, 0, 0.559);
+}
+/**/
+.water-style {
+    border: solid var(--water) 8px;
+    border-radius: 5px;
+}
+.water-style_bg {
+    background-color: rgba(23, 147, 230, 0.559);
+    border-radius: 5px;
+}
+.water-style_words {
+    color:rgba(0, 67, 201, 0.559);
+}
+/**/
+.electric-style {
+    border: solid var(--electric) 8px;
+    border-radius: 5px;
+}
+.electric-style_bg {
+    background-color: rgba(218, 193, 50, 0.559);
+    border-radius: 5px;
+}
+.electric-style_words {
+    color:rgba(175, 160, 3, 0.559);
+}
+/**/
+.poison-style {
+    border: solid var(--poison) 8px;
+    border-radius: 5px;
+}
+.poison-style_bg {
+    background-color: rgba(136, 43, 183, 0.559);
+    border-radius: 5px;
+}
+.poison-style_words {
+    color:rgba(74, 4, 85, 0.559);
+}
+/**/
+.ground-style {
+    border: solid var(--ground) 8px;
+    border-radius: 5px;
+}
+.ground-style_bg {
+    background-color:  rgba(59, 32, 32, 0.559);
+    border-radius: 5px;
+}
+.ground-style_words {
+    color:rgba(47, 18, 18, 0.559);
+}
+/**/
+.flying-style {
+    border: solid var(--flying) 8px;
+    border-radius: 5px;
+}
+.flying-style_bg {
+    background-color: rgba(87, 101, 118, 0.559);
+    border-radius: 5px;
+}
+.flying-style_words {
+    color:rgba(58, 82, 85, 0.559);
+}
+/**/
+.psychic-style {
+    border: solid var(--psychic) 8px;
+    border-radius: 5px;
+}
+.psychic-style_bg {
+    background-color: rgba(134, 36, 106, 0.559);
+    border-radius: 5px;
+}
+.psychic-style_words {
+    color:rgba(88, 21, 61, 0.559);
+}
+/**/
+.bug-style {
+    border: solid var(--bug) 8px;
+    border-radius: 5px;
+}
+.bug-style_bg {
+    background-color: rgba(12, 56, 6, 0.559);
+    border-radius: 5px;
+}
+.bug-style_words {
+    color:rgba(7, 51, 25, 0.559);
+}
+/**/
+.rock-style {
+    border: solid var(--rock) 8px;
+    border-radius: 5px;
+}
+.rock-style_bg {
+    background-color: rgba(30, 26, 26, 0.559);
+    border-radius: 5px;
+}
+.rock-style_words {
+    color:rgba(34, 31, 31, 0.559);
+}
+/**/
+.ghost-style {
+    border: solid var(--ghost) 8px;
+    border-radius: 5px;
+}
+.ghost-style_bg {
+    background-color: rgba(55, 66, 110, 0.559);
+    border-radius: 5px;
+}
+.ghost-style_words {
+    color:rgba(63, 63, 122, 0.559);
+}
+/**/
+.dragon-style {
+    border: solid var(--dragon) 8px;
+    border-radius: 5px;
+}
+.dragon-style_bg {
+    background-color: rgba(28, 22, 112, 0.559);
+    border-radius: 5px;
+}
+.dragon-style_words {
+    color:rgba(31, 26, 81, 0.559);
+}
+/**/
+.dark-style {
+    border: solid var(--dark) 8px;
+    border-radius: 5px;
+}
+.dark-style_bg {
+    background-color: rgba(5, 4, 4, 0.559);
+    border-radius: 5px;
+}
+.dark-style_words {
+    color:rgba(19, 13, 13, 0.559);
+}
+/**/
+.steel-style {
+    border: solid var(--steel) 8px;
+    border-radius: 5px;
+}
+.steel-style_bg {
+    background-color: rgba(58, 58, 58, 0.732);
+    border-radius: 5px;
+}
+.steel-style_words {
+    color:rgba(89, 89, 89, 0.94);
+}
+/**/
+.fairy-style {
+    border: solid var(--fairy) 8px;
+    border-radius: 5px;
+}
+.fairy-style_bg {
+    background-color: rgba(210, 62, 168, 0.688);
+    border-radius: 5px;
+}
+.fairy-style_words {
+    color:rgba(224, 69, 206, 0.649);
+}
+/**/
+.unknown-style {
+    border: solid var(--unknown) 8px;
+    border-radius: 5px;
+}
+.unknown-style_bg {
+    background-image: linear-gradient(var(--unknown), beige);
+    border-radius: 5px;
+}
+.unknown-style_words {
+    color: var(--unknown);
+}
+/**/
+.shadow-style {
+    border: solid var(--shadow) 8px;
+    border-radius: 5px;
+}
+.shadow-style_bg {
+    background-image: linear-gradient( rgb(60, 60, 60), black);
+    border-radius: 5px;
+}
+.shadow-style_words {
+    color:rgb(43, 43, 43);
+}
+/*Learn Tailwind */
+.pagination-ul {
+
+    margin-top: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+}
+.current-li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    margin: 6px;
+    background-color: red;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white
+}
+.pagination-li {
+    border-radius: 10px;
+    border: black 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 6px;
+    font-size: 20px;
+    color: black;
+}
+.li-arrows {
+    font-weight: 900;
+    font-size: 20px;
+    margin: 5px;
+}
+/*Pokemon Details */
+.pokedetails-main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pokedetails-article {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 320px;
+    height: 600px;
+}
+.pokedetails-span {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 30px;
+}
+.pokedetails-gradient {
+    width: 318px;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.image-gradient-div {
+    display: flex;
+    justify-content: center;
+}
+.pokedetails-img {
+    margin-top: 35px;
+    position: absolute;
+    width: 200px;
+}
+.pokedetails-section {
+    height: 300px;
+}
+/* Pokemonstat */
+.pokemonstat-section {
+    padding-top: 10px;
+    height: 290px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
+    justify-items: start;
+}
+.pokemonstat-h2 {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 25px;
+}
+/* bar prog */
+.barprog-article {
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+}
+.barprog-h5 {
+    font-weight: 600;
+    font-size: 18px;
+}
+/* gradients */ 
+.grass_gradient {background-image: linear-gradient(rgb(255, 230, 121), green);}
+.normal_gradient {background-image: linear-gradient(rgb(231, 231, 231), var(--normal));}
+.fighting_gradient {background-image: linear-gradient(rgb(187, 133, 133), var(--fighting) );}
+.ice_gradient {background-image: linear-gradient(rgb(255, 255, 255), var(--ice));}
+.fire_gradient {background-image: linear-gradient(white, var(--fire) );}
+.water_gradient {background-image: linear-gradient(white, var(--water));}
+.electric_gradient {background-image: linear-gradient(white, var(--electric));}
+.poison_gradient {background-image: linear-gradient(white, var(--poison));}
+.ground_gradient {background-image: linear-gradient(white, var(--ground));}
+.flying_gradient {background-image: linear-gradient(white, var(--flying));} 
+.psychic_gradient {background-image: linear-gradient(white, var(--psychic));}
+.bug_gradient {background-image: linear-gradient(white, var(--bug));}
+.rock_gradient {background-image: linear-gradient(white, var(--rock));} 
+.ghost_gradient {background-image: linear-gradient(white, var(--ghost));}
+.dragon_gradient {background-image: linear-gradient(white, var(--dragon));}
+.dark_gradient {background-image: linear-gradient(white, var(--dark));}
+.steel_gradient {background-image: linear-gradient(white, var(--steel));}
+.fairy_gradient {background-image: linear-gradient(white, var(--fairy));}
+/* spans */
+.grass_span{color: var(--grass)}
+.normal_span {color: var(--normal)}
+.fighting_span {color: var(--fighting)}
+.ice_span {color: var(--ice)}
+.fire_span {color: var(--fire)}
+.water_span {color: var(--water)}
+.electric_span {color: var(--electric)}
+.poison_span {color: var(--poison)}
+.ground_span{color: var(--ground)}
+.flying_span {color: var(--flying)}
+.psychic_span {color: var(--psychic)}
+.bug_span {color: var(--bug)}
+.rock_span{color: var(--rock)} 
+.ghost_span{color: var(--ghost)}
+.dragon_span {color: var(--dragon)}
+.dark_span {color: var(--dark)}
+.steel_span{color: var(--steel)}
+.fairy_span {color: var(--fairy)}
